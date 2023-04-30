@@ -30,21 +30,21 @@ def svg2stub(filename_in, filename_out):
         for key, value in node.items():
             if '{' in key:
                 continue
-            fh.write(' %s="%s"' % (key, value))
+            fh.write(f' {key}="{value}"')
         fh.write('></svg>')
 
 # -----------------------------------------------------
 
 if __name__ == '__main__':
     if len(sys.argv) != 3:
-        print("Usage: %s <in-filename> <out-filename>" % sys.argv[0])
+        print(f"Usage: {sys.argv[0]} <in-filename> <out-filename>")
         quit()
 
     filename_in = sys.argv[1]
     filename_out = sys.argv[2]
 
     if not os.path.exists(filename_in):
-        print("File '%s' does not exist" % filename_in)
+        print(f"File '{filename_in}' does not exist")
         quit()
 
     # dump code now
