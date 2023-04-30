@@ -36,13 +36,13 @@ def res2c(filename):
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print("Usage: %s <filename>" % sys.argv[0])
+        print(f"Usage: {sys.argv[0]} <filename>")
         quit()
 
     filename = sys.argv[1]
 
     if not os.path.exists(filename):
-        print("File '%s' does not exist" % filename)
+        print(f"File '{filename}' does not exist")
         quit()
 
     # dump code now
